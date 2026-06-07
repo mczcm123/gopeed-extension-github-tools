@@ -1,0 +1,56 @@
+{
+  "name": "gopeed-github-tools",
+  "author": "mczcm123",
+  "title": "GitHub Accelerator",
+  "description": "加速下载 GitHub 资源：Releases、Raw 文件、仓库打包、Gist、API 等",
+  "icon": "icon.png",
+  "version": "1.0.0",
+  "homepage": "",
+  "repository": {
+    "url": "https://github.com/mczcm123/gopeed-extension-github-tools"
+  },
+  "scripts": [
+    {
+      "event": "onResolve",
+      "match": {
+        "urls": [
+          "*://github.com/*",
+          "*://raw.githubusercontent.com/*",
+          "*://gist.githubusercontent.com/*",
+          "*://api.github.com/repos/*"
+        ]
+      },
+      "entry": "dist/index.js"
+    }
+  ],
+  "settings": [
+    {
+      "name": "token",
+      "title": "GitHub Token",
+      "description": "GitHub personal access token for higher API rate limit",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "ua",
+      "title": "User-Agent",
+      "description": "Custom User-Agent for requests",
+      "type": "string",
+      "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    {
+      "name": "useGhproxy",
+      "title": "Use ghproxy",
+      "description": "Enable ghproxy.com acceleration for faster downloads",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "ghproxyUrl",
+      "title": "ghproxy URL",
+      "description": "Custom ghproxy server URL",
+      "type": "string",
+      "value": "https://gh-proxy.com/"
+    }
+  ]
+}
