@@ -1,7 +1,7 @@
 {
   "name": "gopeed-github-tools",
   "author": "mczcm123",
-  "title": "GitHub Accelerator",
+  "title": "github tools",
   "description": "加速下载 GitHub 资源：Releases、Raw 文件、仓库打包、Gist、API 等",
   "icon": "icon.png",
   "version": "1.0.0",
